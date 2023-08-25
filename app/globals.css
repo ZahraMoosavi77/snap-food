@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+
+
+.btn{
+  @apply mb-spacing-2 focus:font-vsb  relative block w-full text-left
+}
+
+
+
+
+/* .btn::before{
+  @apply content-[''] bg-surface-overlay h-[0px] w-[2px] absolute rounded-lg opacity-0 mr-[0px]
+  transition
+  
+} */
+
+/* .btn:focus::before{
+  @apply opacity-100 h-[25px] 
+} */
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* @layer components {
+     
+} */
+
+@layer {
+  
+  @font-face {
+    font-family: "Vazirmatn-Regular";
+    src: url("/font/Vazirmatn-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Vazirmatn-Medium";
+    src: url("/font/Vazirmatn-Medium.ttf");
+  }
+
+  @font-face {
+    font-family: "Vazirmatn-SemiBold";
+    src: url("/font/Vazirmatn-SemiBold.ttf");
+  }
+
+  @font-face {
+    font-family: "Vazirmatn-Bold";
+    src: url("/font/Vazirmatn-Bold.ttf");
+  }
+
+  @font-face {
+    font-family: "Vazirmatn-ExtraBold";
+    src: url("/font/Vazirmatn-ExtraBold.ttf");
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+
+.hide {
+  display: none;
+}
+.label-toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 23px;
+  margin: 0 10px;
+ 
+  
+}
+.input-toggle {
+  display: none;
+  
+}
+
+body {
+ color: #3a3d42;;
+}
+
+ 
+ 
+
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 15px;
+  right: 2.5px;
+  bottom: 2.5px;
+  background-color: rgba(104, 101, 99, 0.716);;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.input-toggle:checked + .slider{
+  background-color: rgb(27, 196, 117);
+}
+.input-toggle:checked + .slider::before {
+  transform: translateX(-20px);
+}
+
+@media (min-width:320px) {
+  .hide {
+    display: none;
+  }
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border: 3px solid #fff;
+  border-radius: 16px;
+  
+  transition: all .2s linear;
+
+}
+
+
+
+
+
+/* width */
+
+
+ /* width */
+::-webkit-scrollbar {
+
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track:horizontal  {
+  background: #f0efef;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb:horizontal {
+  background: #bebebeb6;
+  border-radius: 5px;
+  border: 2px solid #fff;
+}
+ /* Handle on hover  */
+::-webkit-scrollbar-thumb:hover:horizontal {
+  background: #c5c5c5;
+}
+
+
+
+.move:hover img{
+
+  transform: translateX(-3px);
+
+}
+.scroll-service{
+  direction: ltr;
+}
+
+
+
+
+.bouncing-loader > div {
+  width: 16px;
+  height: 16px;
+  margin: 3px 6px;
+  border-radius: 50%;
+  background-color: #FF00A6;
+  opacity: 1;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translateY(-16px);
+  }
+}
+
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
